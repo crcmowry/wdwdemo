@@ -16,6 +16,17 @@
             <button class="btn red lighten-2 waves-effect" type="submit" name="action"> Post! </button>
           </div>
         </div>
+        <div class="row">
+          <div class="col s6">
+            {% for post in posts[::-1] %}
+            <p>
+              <b> {{ post.title }} </b>
+            </p>
+            <p> {{ post.timestamp }} </p>
+            <p> {{ post.body }} </p>
+            {% endfor %}
+          </div>
+        </div>
     </form>
   </div>
 </div>
